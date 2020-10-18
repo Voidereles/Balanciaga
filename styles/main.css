@@ -129,13 +129,26 @@ body {
           align-items: center;
 }
 
+.header .dropdown-menu li:first-of-type {
+  border-top: none;
+}
+
 .header .dropdown-menu li .dropdown-item {
   height: 45px;
   line-height: 45px;
 }
 
-.header .dropdown-menu li:first-of-type {
-  margin-top: 45px;
+.header .dropdown-menu li .dropdown-item.go-back {
+  background-image: url("../icons/chevron-right.svg");
+  border: none;
+  height: 12px;
+  width: 7px;
+  background-size: contain;
+  border: none;
+  background-repeat: no-repeat;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  padding: 0 0.75rem;
 }
 
 .header .dropdown-menu .dropdown-item {
@@ -165,6 +178,14 @@ body {
 .header .dropdown-submenu {
   top: 38px;
   right: -50vw;
+}
+
+.header .submenu-title {
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 0 1rem;
+  text-transform: uppercase;
 }
 
 .header .dropdown-submenu .dropdown-menu {
