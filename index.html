@@ -117,8 +117,7 @@
                     </form>
                 </div>
 
-                <div class="col-12 col-lg-4 header__part header__controls d-none d-lg-flex collapse navbar-collapse"
-                    id="navbarsExampleDefault">
+                <div class="col-12 col-lg-4 header__part header__controls d-flex">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -135,28 +134,60 @@
                                 <img src="icons/header-clientservice.svg" alt="help" class="nav-link__help">
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="icons/header-burger.svg" alt="menu" class="nav-link__burger">
                             </a>
+                            <!-- collapse navbar-collapse -->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                        href="#">Submenu</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+
+
+                                        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                                href="#">Subsubmenu</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                                href="#">Second subsubmenu</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                                            </ul>
+                                        </li>
+
+
+
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
 
 
                     </ul>
-                    <!-- <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form> -->
+
                 </div>
             </div>
 
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+            <!-- <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                 data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <div class="navbar__burger">
                     <img src="icons/header-burger.svg" alt="menu" class="navbar__burger-img">
                 </div>
-            </button>
+            </button> -->
         </nav>
 
     </header>
