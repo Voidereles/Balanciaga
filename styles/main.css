@@ -336,15 +336,15 @@ body {
 .navbar .basket__img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 100%;
-  max-height: 100%;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  width: 100%;
+  height: 100%;
 }
 
 .navbar .basket__img-container {
   width: calc(5/12 * 100%);
   max-width: 155px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .navbar .basket__info {
@@ -951,6 +951,13 @@ body {
   text-decoration: none;
 }
 
+@media (max-width: 1440px) {
+  .navbar-nav .nav-link__collapse,
+  .header .dropdown-menu.show {
+    width: calc(33.333333vw - -1px);
+  }
+}
+
 @media (max-width: 992px) {
   .header {
     height: 90px;
@@ -1046,6 +1053,11 @@ body {
   .navbar-nav .nav-link__collapse {
     width: 100vw;
     border-left: 0;
+    top: 90px;
+  }
+  .navbar-nav .nav-link__collapse,
+  .header .dropdown-menu.show {
+    width: 100vw;
   }
   .navbar-brand {
     padding: 0;
