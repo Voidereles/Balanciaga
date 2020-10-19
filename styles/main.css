@@ -956,4 +956,20 @@ body {
     opacity: 0;
   }
 }
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .legalArea__main-heading,
+  article,
+  article * {
+    visibility: visible;
+  }
+  article {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
 /*# sourceMappingURL=main.css.map */
