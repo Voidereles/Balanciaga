@@ -29,6 +29,7 @@ $('body').on('click', function (e) {
         $('.nav-link__collapse').has(e.target).length === 0
     ) {
         $('.nav-link__collapse').collapse('hide');
+        $('.nav-link__burger').attr('src', '../icons/header-burger.svg');
     }
 });
 
