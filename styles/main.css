@@ -768,6 +768,8 @@ body {
   -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   margin-right: -1px;
+  margin-left: -1px;
+  width: calc(100% + 2px);
 }
 
 .products__item {
@@ -834,6 +836,14 @@ body {
   text-align: center;
   margin-right: 0.5rem;
   margin-top: 0.75rem;
+}
+
+.item-page__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .legalArea {

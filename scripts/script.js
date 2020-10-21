@@ -25,6 +25,11 @@ $(document).ready(function () {
         checkmarkBg = $(this).attr('data-color');
         $(this).css('background-color', checkmarkBg);
     });
+
+    $('.products__color').each(function () {
+        checkmarkBg = $(this).attr('data-color');
+        $(this).css('background-color', checkmarkBg);
+    });
 });
 
 $(document).on('click', '.basket__remove-item', function (e) {
