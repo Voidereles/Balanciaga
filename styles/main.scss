@@ -821,6 +821,78 @@ body {
         border-right: 1px solid black;
         border-bottom: 1px solid black;
     }
+
+    &__buttons {
+        text-align: center;
+        height: 45px;
+        line-height: 45px;
+        border-bottom: 1px solid black;
+    }
+
+    &__btn {
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+
+        &--price {
+            font-weight: bold;
+            border-right: 1px solid black;
+        }
+
+        &--ship {
+            border-left: 1px solid black;
+        }
+
+        &--add {
+            background-color: greenyellow;
+            font-size: $font-small;
+            padding: 0;
+            border-bottom: 1px solid black;
+
+        }
+    }
+
+    &__title {
+        font-size: $font-small;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &-container {
+            position: relative;
+            padding: 1.5rem 1rem 0.5rem 1rem;
+            border-bottom: 1px solid black;
+        }
+    }
+
+    &__add-wish {
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
+    }
+
+    &__version {
+        padding: 1rem;
+        border-bottom: 1px solid black;
+
+        &-title {
+            font-size: $font-small;
+            font-weight: 400;
+            display: inline-block;
+        }
+    }
+
+    &__details {
+        padding: 1rem;
+
+        &-title {
+            font-size: $font-small;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+
 }
 
 .legalArea {
