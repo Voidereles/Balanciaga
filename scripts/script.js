@@ -18,6 +18,13 @@ $(document).ready(function () {
     $('.submenu-title').each(function () {
         $(this).html($(this).closest('.dropdown-submenu').children('.dropdown-toggle').text());
     });
+
+    let checkmarkBg;
+
+    $('.filters__colors .checkbox__checkmark').each(function () {
+        checkmarkBg = $(this).attr('data-color');
+        $(this).css('background-color', checkmarkBg);
+    });
 });
 
 $(document).on('click', '.basket__remove-item', function (e) {
@@ -41,6 +48,14 @@ $('.go-back').on('click', function (e) {
     if ($(this).parent().parent().hasClass('show')) {
         $(this).parent().parent().removeClass('show');
     }
+});
+
+$('#collapseFilters').on('hidden.bs.collapse', function () {
+    $('.filters__link').html('Filters');
+});
+
+$('#collapseFilters').on('shown.bs.collapse', function () {
+    $('.filters__link').html('Close');
 });
 
 $('.nav-item > .dropdown-toggle').on('click', function () {

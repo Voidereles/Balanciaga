@@ -21,6 +21,89 @@ a:hover, a:active, a:focus {
   color: black;
 }
 
+.checkbox,
+.radio-button {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 0.25rem;
+  width: 36px;
+  height: 36px;
+}
+
+.checkbox__input,
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox__checkmark,
+.radio-button__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background-color: grey;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border-radius: 0;
+}
+
+.checkbox:hover .checkbox__input ~ .checkbox__checkmark,
+.radio-button:hover .checkbox__input ~ .checkbox__checkmark, .checkbox:hover
+.radio-button__input ~ .checkbox__checkmark,
+.radio-button:hover
+.radio-button__input ~ .checkbox__checkmark, .checkbox:hover .checkbox__input ~
+.radio-button__checkmark,
+.radio-button:hover .checkbox__input ~
+.radio-button__checkmark, .checkbox:hover
+.radio-button__input ~
+.radio-button__checkmark,
+.radio-button:hover
+.radio-button__input ~
+.radio-button__checkmark {
+  opacity: 0.7;
+}
+
+.checkbox__checkmark::after,
+.radio-button__checkmark::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+  outline: 1px solid black;
+  opacity: 0;
+}
+
+.checkbox__input:checked ~ .checkbox__checkmark::after,
+.radio-button__input:checked ~ .checkbox__checkmark::after, .checkbox__input:checked ~
+.radio-button__checkmark::after,
+.radio-button__input:checked ~
+.radio-button__checkmark::after {
+  display: block;
+  opacity: 1;
+}
+
+.checkbox__input:checked ~ .checkbox__text,
+.radio-button__input:checked ~ .checkbox__text, .checkbox__input:checked ~
+.radio-button__text,
+.radio-button__input:checked ~
+.radio-button__text {
+  display: none;
+}
+
 * {
   font-family: Arial, Arial, Helvetica, sans-serif;
   letter-spacing: 0.5px;
@@ -599,6 +682,158 @@ body {
 
 .categories__link:hover, .categories__link:focus {
   color: black;
+}
+
+.breadcrumb {
+  background: white;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin: 0;
+  height: 45px;
+}
+
+.breadcrumb__nav {
+  background: white;
+  border-bottom: 1px solid black;
+}
+
+.breadcrumb-item {
+  line-height: 18.6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '';
+  background-image: url("../icons/chevron-right.svg");
+  width: 36px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.filters__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.75rem;
+  margin-right: 1rem;
+  text-transform: uppercase;
+}
+
+.filters__collapse {
+  position: absolute;
+  top: 91px;
+  width: calc(100% + 1px);
+  right: -1px;
+  z-index: 1;
+  background: white;
+}
+
+.filters__item {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.75rem;
+}
+
+.filters__title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.filters__sort-option {
+  display: block;
+  padding: 0;
+  width: 100%;
+  height: 1.5rem;
+}
+
+.filters__sort-option.selected {
+  text-decoration: underline;
+}
+
+.products {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin-right: -1px;
+}
+
+.products__item {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
+.products__item:hover .products__img {
+  display: none;
+}
+
+.products__item:hover .products__img--second {
+  display: inline-block;
+}
+
+.products__item:hover .products__top-info {
+  display: none;
+}
+
+.products__item:hover .products__bottom-info {
+  display: block;
+}
+
+.products__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.products__img--second {
+  display: none;
+}
+
+.products__top-info, .products__bottom-info {
+  padding: 0.75rem;
+}
+
+.products__top-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.products__bottom-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.products__name, .products__price, .products__size {
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+
+.products__size, .products__color {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border: 1px solid black;
+  line-height: 32px;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .legalArea {
@@ -1202,6 +1437,34 @@ body {
   .categories__container--firstLevel {
     height: auto;
     border-right: none;
+  }
+  .filters__collapse {
+    position: absolute;
+    top: 136px;
+    width: 100vw;
+    left: 0;
+    background: white;
+    z-index: 1;
+  }
+  .products {
+    -ms-grid-columns: (minmax(150px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .products__item {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    position: relative;
+  }
+  .products__top-info, .products__bottom-info {
+    display: block;
+  }
+  .products__size, .products__color {
+    width: 24px;
+    height: 24px;
+    font-size: 0.5rem;
+    line-height: 24px;
+    margin-right: 0.25rem;
+    margin-top: 0.5rem;
   }
   .legalArea__content {
     border-left: none;

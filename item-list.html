@@ -126,6 +126,7 @@
                                 LOG IN
                             </a>
                             <div class="nav-link__collapse log-in__collapse collapse" id="collapseLogIn">
+                                <!-- <div class="card card-body"> -->
                                 <form class="w-100" action="">
                                     <label class="log-in__label" for="emailLogin">Email Address*</label>
                                     <input class="log-in__input" type="email" name="emailLogin" id="emailLogin"
@@ -160,84 +161,14 @@
                                 <img src="icons/header-minicart.svg" alt="cart" class="nav-link__cart">
                             </a>
                             <div class="nav-link__collapse basket__collapse collapse" id="collapseBasket">
-                                <div class="basket__item">
-                                    <div class="row mx-0">
-                                        <div class="basket__img-container pr-0">
-                                            <a class="w-100" href="#">
-                                                <img class="basket__img" src="images/buty.jpg" alt="buty">
-                                            </a>
-                                        </div>
-                                        <div class="basket__info p-3">
-                                            <h6 class="basket__item-title">HEELED TOE</h6>
-                                            <div class="basket__info-attr-container">
-
-                                                <div class="basket__info-attr">
-                                                    Quantity: 1
-                                                </div>
-                                                <div class="basket__info-attr">
-                                                    Colour: BLACK
-                                                </div>
-                                                <div class="basket__info-attr">
-                                                    Size: 36 (EU)
-                                                </div>
-                                            </div>
-                                            <div class="price mt-3">
-                                                EUR 1.090
-                                            </div>
-
-                                            <button class="btn btn-link basket__remove-item">
-                                                <img src="icons/header-close.svg" alt="close">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="basket__item">
-                                    <div class="row mx-0">
-                                        <div class="basket__img-container pr-0">
-                                            <a class="w-100" href="#">
-                                                <img class="basket__img" src="images/buty.jpg" alt="buty">
-                                            </a>
-                                        </div>
-                                        <div class="basket__info p-3">
-                                            <h6 class="basket__item-title">HEELED TOE2</h6>
-                                            <div class="basket__info-attr-container">
-
-                                                <div class="basket__info-attr">
-                                                    Quantity: 1
-                                                </div>
-                                                <div class="basket__info-attr">
-                                                    Colour: BLACK
-                                                </div>
-                                                <div class="basket__info-attr">
-                                                    Size: 36 (EU)
-                                                </div>
-                                            </div>
-                                            <div class="price mt-3">
-                                                EUR 1.090
-                                            </div>
-
-                                            <button class="btn btn-link basket__remove-item">
-                                                <img src="icons/header-close.svg" alt="close">
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="basket__subtotal">
-                                    <span>Subtotal</span>
-                                    <span>EUR 2.180</span>
-                                </div>
-
-                                <button type="submit" class="form__submit btn mx-auto my-3">
-                                    <span>VIEW SHOPPING BAG</span>
-                                    <span>VIEW SHOPPING BAG</span>
+                                <!-- <div class="card card-body"> -->
+                                <span class="basket__empty mt-5">Your Shopping Bag is Empty</span>
+                                <button type="submit" class="form__submit btn mx-auto mb-3 mb-lg-5">
+                                    <span>BACK TO SHOPPING</span>
+                                    <span>BACK TO SHOPPING</span>
                                 </button>
-                                <button type="submit" class="form__submit btn mx-auto my-3">
-                                    <span>CHECKOUT</span>
-                                    <span>CHECKOUT</span>
-                                </button>
-
                             </div>
+
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -315,169 +246,280 @@
 
     </header>
     <main class="main">
-        <section class="clientService">
-            <h1 class="clientService__heading">Client Service</h1>
-            <div class="clientService__description container text-center">
-                <p>WE HAVE SET UP THIS SECTION FOR QUICK REFERENCE ON OUR POLICIES AND FEATURES.</p>
-                <p>For online order enquiries you can contact our Client Service.</p>
+        <nav class="breadcrumb__nav d-flex justify-content-between" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">ALL</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Defile</li>
+            </ol>
 
+            <a class="filters__link" data-toggle="collapse" href="#collapseFilters" role="button" aria-expanded="false"
+                aria-controls="collapseFilters">
+                Filters
+            </a>
 
+            <div class="filters__collapse collapse" id="collapseFilters">
+                <div class="row mx-0">
+                    <div class="filters__item filters__colors col-12 col-md-6 col-lg-3">
+                        <h3 class="filters__title">
+                            Colour
+                        </h3>
+                        <label class="checkbox">
+                            <!-- tutaj tekst -->
+                            <input class="checkbox__input" type="checkbox">
+                            <span class="checkbox__checkmark" data-color="#000000"></span>
+                        </label>
 
-                <p> By contacting Client Service, I agree to my data being transferred outside of my local
-                    country/region.</p>
+                        <label class="checkbox">
+                            <!-- tutaj tekst -->
+                            <input class="checkbox__input" type="checkbox" checked>
+                            <span class="checkbox__checkmark" data-color="#FF0000"></span>
+                        </label>
+                    </div>
 
+                    <div class="filters__item filters__sort col-12 col-md-6 col-lg-3">
+                        <h3 class="filters__title">
+                            Sort by
+                        </h3>
 
+                        <a href="#" class="filters__sort-option selected"> Best mmatch</a>
+                        <a href="#" class="filters__sort-option"> Best match</a>
 
-                <p>Thank you,<br>Balenciaga.com</p>
+                    </div>
+
+                    <div class="filters__item col-12 col-md-6 col-lg-3 d-none d-lg-block"></div>
+                    <div class="filters__item col-12 col-md-6 col-lg-3 d-none d-lg-block"></div>
+                </div>
+
             </div>
-            <div class="clientService__contact container">
-                <div class="row">
-                    <div class="col-12 col-lg-4 mt-4 mt-lg-0 text-center">
-                        <div class="mb-3 text-uppercase">CALL US +44 20 33 18 60 32</div>
-                        <div>Mon-Sat 9am-6.30pm</div>
-                    </div>
+        </nav>
+        <section class="products">
+            <div class="products__item">
+                <a class="products__link" href="#">
+                    <img class="products__img" src="images/front.jpg" alt="front-image">
+                    <img class="products__img products__img--second" src="images/back.jpg" alt="back-image">
 
-                    <div class="col-12 col-lg-4 mt-4 mt-lg-0 text-center">
-                        <div class="mb-3 text-uppercase">BOOK AN APPOINTMENT</div>
-                        <div>Book an in-store
-                            appointment online</div>
-                        <a class="clientService__link text-underline" href="#">
-                            Book Now</a>
+                </a>
+                <div class="products__top-info">
+                    <h3 class="products__name">Defile sport Hoodie</h3>
+                    <span class="products__price">EUR 395</span>
+                </div>
+                <div class="products__bottom-info">
+                    <div class="products__sizes-container">
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
                     </div>
-
-                    <div class="col-12 col-lg-4 mt-4 mt-lg-0 text-center">
-                        <div class="mb-3 text-uppercase">BOOK AN APPOINTMENT</div>
-                        <div>Mon-Sat 9am-6.30pm</div>
+                    <div class="products__colors-container">
+                        <span class="products__color" data-color="#000000"></span>
+                        <span class="products__color" data-color="#FF0000"></span>
                     </div>
                 </div>
+
+            </div>
+            <div class="products__item">
+                <a class="products__link" href="#">
+                    <img class="products__img" src="images/front.jpg" alt="front-image">
+                    <img class="products__img products__img--second" src="images/back.jpg" alt="back-image">
+
+                </a>
+                <div class="products__top-info">
+                    <h3 class="products__name">Defile sport Hoodie</h3>
+                    <span class="products__price">EUR 395</span>
+                </div>
+                <div class="products__bottom-info">
+                    <div class="products__sizes-container">
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                    </div>
+                    <div class="products__colors-container">
+                        <span class="products__color" data-color="#000000"></span>
+                        <span class="products__color" data-color="#FF0000"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="products__item">
+                <a class="products__link" href="#">
+                    <img class="products__img" src="images/front.jpg" alt="front-image">
+                    <img class="products__img products__img--second" src="images/back.jpg" alt="back-image">
+
+                </a>
+                <div class="products__top-info">
+                    <h3 class="products__name">Defile sport Hoodie</h3>
+                    <span class="products__price">EUR 395</span>
+                </div>
+                <div class="products__bottom-info">
+                    <div class="products__sizes-container">
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                    </div>
+                    <div class="products__colors-container">
+                        <span class="products__color" data-color="#000000"></span>
+                        <span class="products__color" data-color="#FF0000"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="products__item">
+                <a class="products__link" href="#">
+                    <img class="products__img" src="images/front.jpg" alt="front-image">
+                    <img class="products__img products__img--second" src="images/back.jpg" alt="back-image">
+
+                </a>
+                <div class="products__top-info">
+                    <h3 class="products__name">Defile sport Hoodie</h3>
+                    <span class="products__price">EUR 395</span>
+                </div>
+                <div class="products__bottom-info">
+                    <div class="products__sizes-container">
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                    </div>
+                    <div class="products__colors-container">
+                        <span class="products__color" data-color="#000000"></span>
+                        <span class="products__color" data-color="#FF0000"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="products__item">
+                <a class="products__link" href="#">
+                    <img class="products__img" src="images/front.jpg" alt="front-image">
+                    <img class="products__img products__img--second" src="images/back.jpg" alt="back-image">
+
+                </a>
+                <div class="products__top-info">
+                    <h3 class="products__name">Defile sport Hoodie</h3>
+                    <span class="products__price">EUR 395</span>
+                </div>
+                <div class="products__bottom-info">
+                    <div class="products__sizes-container">
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                    </div>
+                    <div class="products__colors-container">
+                        <span class="products__color" data-color="#000000"></span>
+                        <span class="products__color" data-color="#FF0000"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="products__item">
+                <a class="products__link" href="#">
+                    <img class="products__img" src="images/front.jpg" alt="front-image">
+                    <img class="products__img products__img--second" src="images/back.jpg" alt="back-image">
+
+                </a>
+                <div class="products__top-info">
+                    <h3 class="products__name">Defile sport Hoodie</h3>
+                    <span class="products__price">EUR 395</span>
+                </div>
+                <div class="products__bottom-info">
+                    <div class="products__sizes-container">
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                    </div>
+                    <div class="products__colors-container">
+                        <span class="products__color" data-color="#000000"></span>
+                        <span class="products__color" data-color="#FF0000"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="products__item">
+                <a class="products__link" href="#">
+                    <img class="products__img" src="images/front.jpg" alt="front-image">
+                    <img class="products__img products__img--second" src="images/back.jpg" alt="back-image">
+
+                </a>
+                <div class="products__top-info">
+                    <h3 class="products__name">Defile sport Hoodie</h3>
+                    <span class="products__price">EUR 395</span>
+                </div>
+                <div class="products__bottom-info">
+                    <div class="products__sizes-container">
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                        <span class="products__size">
+                            XS
+                        </span>
+                    </div>
+                    <div class="products__colors-container">
+                        <span class="products__color" data-color="#000000"></span>
+                        <span class="products__color" data-color="#FF0000"></span>
+                    </div>
+                </div>
+
             </div>
 
         </section>
-        <section class="faq">
-            <h2 class="faq__heading">Frequently Asked Questions</h2>
-            <div class="faq__container container">
-                <h3 class="faq__subheading">Select a category</h3>
-                <ul class="nav nav-pills mb-3 px-4" id="pills-tab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                            aria-controls="pills-home" aria-selected="true">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                            aria-controls="pills-profile" aria-selected="false">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                            aria-controls="pills-contact" aria-selected="false">Contact</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                        aria-labelledby="pills-home-tab">
 
-                        <h3 class="faq__heading">Shopping</h3>
-
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse"
-                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Collapsible Group Item #1
-                                    </button> <svg xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px"
-                                        y="0px" width="13px" height="13px" viewBox="0 0 13 13"
-                                        enable-background="new 0 0 13 13" xml:space="preserve">
-                                        <rect y="6" fill="none" stroke="#000000" stroke-width="1" stroke-miterlimit="10"
-                                            width="13" height="1" />
-                                        <rect class="vertical-rect" x="6" fill="none" stroke="#000000" stroke-width="1"
-                                            stroke-miterlimit="10" width="1" height="13" />
-                                    </svg>
-                                </div>
-
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                    data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Collapsible Group Item #2
-                                    </button> <svg xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px"
-                                        y="0px" width="13px" height="13px" viewBox="0 0 13 13"
-                                        enable-background="new 0 0 13 13" xml:space="preserve">
-                                        <rect y="6" fill="none" stroke="#000000" stroke-width="1" stroke-miterlimit="10"
-                                            width="13" height="1" />
-                                        <rect class="vertical-rect" x="6" fill="none" stroke="#000000" stroke-width="1"
-                                            stroke-miterlimit="10" width="1" height="13" />
-                                    </svg>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                        data-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Collapsible Group Item #3
-                                    </button>
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        version="1.1" id="Layer_1" x="0px" y="0px" width="13px" height="13px"
-                                        viewBox="0 0 13 13" enable-background="new 0 0 13 13" xml:space="preserve">
-                                        <rect y="6" fill="none" stroke="#000000" stroke-width="1" stroke-miterlimit="10"
-                                            width="13" height="1" />
-                                        <rect class="vertical-rect" x="6" fill="none" stroke="#000000" stroke-width="1"
-                                            stroke-miterlimit="10" width="1" height="13" />
-                                    </svg>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                    data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                        ...
-                        asdasd</div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                        ...
-                        asaaadasd</div>
-                </div>
-            </div>
-        </section>
     </main>
     <footer class="footer">
         <div class="footer__inner row mx-0">
