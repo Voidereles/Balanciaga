@@ -838,6 +838,10 @@ body {
   margin-top: 0.75rem;
 }
 
+.item-page .row {
+  margin: 0;
+}
+
 .item-page__img {
   -o-object-fit: cover;
      object-fit: cover;

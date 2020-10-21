@@ -815,6 +815,10 @@ body {
 }
 
 .item-page {
+    .row {
+        margin: 0;
+    }
+
     &__img {
         object-fit: cover;
         width: 100%;
