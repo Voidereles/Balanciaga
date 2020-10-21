@@ -826,6 +826,33 @@ body {
         border-bottom: 1px solid black;
     }
 
+    .owl-dots {
+        text-align: center;
+    }
+
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel button.owl-dot {
+        width: 1.5rem;
+        height: 0.35rem;
+        display: inline-block;
+        background: grey;
+        position: static;
+        margin: 1rem 0.25rem;
+
+        &.active {
+            background: black;
+        }
+
+        &:focus,
+        &:active,
+        &:hover {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+    }
+
     &__buttons {
         text-align: center;
         height: 45px;
@@ -883,6 +910,20 @@ body {
             font-size: $font-small;
             font-weight: 400;
             display: inline-block;
+        }
+
+        &-options {
+            .radio-button {
+                &__checkmark {
+                    border-radius: 50%;
+                }
+
+                &__input:checked~.radio-button__checkmark::after {
+                    border-radius: 50%;
+                    outline: none;
+                    box-shadow: 0 0 1px 1px;
+                }
+            }
         }
     }
 
@@ -1565,6 +1606,16 @@ body {
             line-height: 24px;
             margin-right: 0.25rem;
             margin-top: 0.5rem;
+        }
+    }
+
+    .item-page {
+        &__btn {
+
+            &--price,
+            &--add {
+                border-top: 1px solid black;
+            }
         }
     }
 

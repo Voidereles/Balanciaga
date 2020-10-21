@@ -850,6 +850,40 @@ body {
   border-bottom: 1px solid black;
 }
 
+.item-page .owl-dots {
+  text-align: center;
+}
+
+.item-page .owl-carousel .owl-nav button.owl-next,
+.item-page .owl-carousel .owl-nav button.owl-prev,
+.item-page .owl-carousel button.owl-dot {
+  width: 1.5rem;
+  height: 0.35rem;
+  display: inline-block;
+  background: grey;
+  position: static;
+  margin: 1rem 0.25rem;
+}
+
+.item-page .owl-carousel .owl-nav button.owl-next.active,
+.item-page .owl-carousel .owl-nav button.owl-prev.active,
+.item-page .owl-carousel button.owl-dot.active {
+  background: black;
+}
+
+.item-page .owl-carousel .owl-nav button.owl-next:focus, .item-page .owl-carousel .owl-nav button.owl-next:active, .item-page .owl-carousel .owl-nav button.owl-next:hover,
+.item-page .owl-carousel .owl-nav button.owl-prev:focus,
+.item-page .owl-carousel .owl-nav button.owl-prev:active,
+.item-page .owl-carousel .owl-nav button.owl-prev:hover,
+.item-page .owl-carousel button.owl-dot:focus,
+.item-page .owl-carousel button.owl-dot:active,
+.item-page .owl-carousel button.owl-dot:hover {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .item-page__buttons {
   text-align: center;
   height: 45px;
@@ -907,6 +941,17 @@ body {
   font-size: 0.75rem;
   font-weight: 400;
   display: inline-block;
+}
+
+.item-page__version-options .radio-button__checkmark {
+  border-radius: 50%;
+}
+
+.item-page__version-options .radio-button__input:checked ~ .radio-button__checkmark::after {
+  border-radius: 50%;
+  outline: none;
+  -webkit-box-shadow: 0 0 1px 1px;
+          box-shadow: 0 0 1px 1px;
 }
 
 .item-page__details {
@@ -1548,6 +1593,9 @@ body {
     line-height: 24px;
     margin-right: 0.25rem;
     margin-top: 0.5rem;
+  }
+  .item-page__btn--price, .item-page__btn--add {
+    border-top: 1px solid black;
   }
   .legalArea__content {
     border-left: none;
