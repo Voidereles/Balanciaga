@@ -624,6 +624,7 @@ body {
         border-bottom: 1px solid black;
         border-right: 1px solid black;
         position: relative;
+        overflow: hidden;
 
         &--firstLevel {
             height: 100%;
@@ -632,20 +633,42 @@ body {
         &:nth-child(3n) {
             border-right: none;
         }
+
+        &:hover {
+            .categories__img-bg {
+                height: 120%;
+            }
+        }
     }
 
-    &__link {
+    &__title {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
-        width: 100%;
+        // height: 100%;
+        // width: 100%;
         color: black;
+        padding: 1rem;
+        background: white;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            background: white;
+        }
 
         &:hover,
         &:focus {
             color: black;
         }
+    }
+
+    &__img-bg {
+        transition: 0.3s;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        position: absolute;
     }
 }
 
