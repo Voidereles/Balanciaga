@@ -105,7 +105,7 @@ a:hover, a:active, a:focus {
 }
 
 * {
-  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   letter-spacing: 0.5px;
 }
 
@@ -134,7 +134,6 @@ body {
 }
 
 .header__logo {
-  font-family: 'Berkshire Swash', cursive !important;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   color: black;
@@ -983,6 +982,62 @@ body {
   font-size: 0.75rem;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.more-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin-right: -1px;
+  margin-left: -1px;
+  width: calc(100% + 2px);
+}
+
+.more-items__heading-container {
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  height: 45px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.more-items__heading {
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+
+.hero__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.hero__img {
+  max-height: calc(100vh - 90px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 .legalArea {

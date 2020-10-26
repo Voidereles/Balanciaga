@@ -95,7 +95,7 @@ a {
 
 
 * {
-    font-family: Arial, Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     letter-spacing: 0.5px;
 
     &::selection {
@@ -119,7 +119,6 @@ body {
     height: 45px;
 
     &__logo {
-        font-family: 'Berkshire Swash', cursive !important;
         transition: 0.2s;
         color: black;
         padding: 0 7px;
@@ -961,6 +960,47 @@ body {
     }
 
 
+}
+
+.more-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin-right: -1px;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+
+    &__heading-container {
+        width: 100%;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        height: 45px;
+        flex-direction: column;
+    }
+
+    &__heading {
+        font-size: $font-small;
+        margin-bottom: 0;
+    }
+}
+
+.hero {
+    &__text {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__img {
+        max-height: calc(100vh - 90px);
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 .legalArea {
